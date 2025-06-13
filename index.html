@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorial Hosting di GitHub Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #24292e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #24292e;
+      margin-top: 40px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+
+    a {
+      color: #0366d6;
+    }
+
+    footer {
+      background-color: #24292e;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 60px;
+    }
+
+    .step {
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background-color: #dff0d8;
+      padding: 5px 10px;
+      border-left: 5px solid #4CAF50;
+      margin: 20px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tutorial Hosting Gratis di GitHub Pages</h1>
+  </header>
+
+  <div class="container">
+    <div class="step">
+      <h2>1. Apa itu GitHub Pages?</h2>
+      <p><strong>GitHub Pages</strong> adalah layanan gratis dari GitHub untuk hosting website statis. Sangat cocok untuk portofolio, blog, dokumentasi, atau projek web sederhana.</p>
+    </div>
+
+    <div class="step">
+      <h2>2. Syarat Hosting di GitHub Pages</h2>
+      <ul>
+        <li>Punya akun GitHub</li>
+        <li>Website dalam format statis (HTML, CSS, JS)</li>
+        <li>Koneksi internet untuk upload ke GitHub</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>3. Langkah-langkah Hosting</h2>
+      
+      <h3>a. Buat Akun GitHub</h3>
+      <p>Kunjungi <a href="https://github.com" target="_blank">https://github.com</a> dan daftar akun gratis.</p>
+
+      <h3>b. Buat Repository Baru</h3>
+      <ol>
+        <li>Login ke GitHub</li>
+        <li>Klik tombol <strong>New</strong> atau <strong>+</strong> → pilih <em>New repository</em></li>
+        <li>Isi nama repo (misalnya <code>my-website</code>)</li>
+        <li>Pilih <strong>Public</strong></li>
+        <li>Centang “Add a README file” (opsional)</li>
+        <li>Klik <strong>Create repository</strong></li>
+      </ol>
+
+      <h3>c. Upload File Website</h3>
+      <p>Siapkan file seperti <code>index.html</code>, <code>style.css</code>, dsb. Lalu upload:</p>
+      <ul>
+        <li>Via GitHub Web: klik <strong>Add file</strong> → <strong>Upload files</strong></li>
+        <li>Atau via Git:</li>
+        <pre><code>git clone https://github.com/username/my-website.git
+cd my-website
+# tambahkan file
+git add .
+git commit -m "Upload website"
+git push origin main</code></pre>
+      </ul>
+
+      <h3>d. Aktifkan GitHub Pages</h3>
+      <ol>
+        <li>Masuk ke repo kamu</li>
+        <li>Klik tab <strong>Settings</strong></li>
+        <li>Scroll ke bawah, pilih <strong>Pages</strong></li>
+        <li>Pilih source: <strong>main</strong> dan folder <strong>/(root)</strong></li>
+        <li>Klik <strong>Save</strong></li>
+      </ol>
+
+      <div class="highlight">
+        Tunggu beberapa detik, website kamu akan tersedia di:<br/>
+        <code>https://username.github.io/nama-repo/</code>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>4. Tips Tambahan</h2>
+      <ul>
+        <li>Pastikan file utama bernama <code>index.html</code></li>
+        <li>Gunakan folder <code>/</code> saat memilih source Pages</li>
+        <li>Bisa dipakai untuk React, Vue, atau proyek static build</li>
+        <li>Custom domain? Tambahkan file <code>CNAME</code></li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>5. Penutup</h2>
+      <p>Dengan GitHub Pages, kamu bisa membuat website profesional tanpa biaya hosting. Mudah digunakan, cepat, dan cocok untuk siapa saja.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 TutorialGitHubPages | Dibuat dengan ❤️ oleh Hendro Jaya Malau, NIM : 221011450073 | Pemrograman WEB UNPAM
+  </footer>
+</body>
+</html>
