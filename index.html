@@ -66,7 +66,7 @@
 
     .highlight {
       background-color: #dff0d8;
-      padding: 5px 10px;
+      padding: 10px 15px;
       border-left: 5px solid #4CAF50;
       margin: 20px 0;
     }
@@ -75,8 +75,21 @@
       padding-left: 20px;
     }
 
-    ol {
-      padding-left: 20px;
+    .faq-question {
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 10px;
+      background: #e1ecf4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px 15px;
+      background: #f9f9f9;
+      border-left: 3px solid #2196F3;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -155,31 +168,57 @@ git push origin main</code></pre>
     </div>
 
     <div class="step">
-      <h2>5. Penutup</h2>
-      <p>Dengan GitHub Pages, kamu bisa membuat website profesional tanpa biaya hosting. Mudah digunakan, cepat, dan cocok untuk siapa saja.</p>
+      <h2>5. FAQ (Pertanyaan Umum)</h2>
+
+      <div class="faq-question" onclick="toggleFaq(0)">
+        🔹 Bagaimana cara menambahkan file <code>index.html</code> langsung tanpa VS Code?
+      </div>
+      <div class="faq-answer">
+        <p>Klik <strong>Add file</strong> → <strong>Create new file</strong> di GitHub, beri nama <code>index.html</code>, lalu isi konten HTML-nya. Setelah itu klik <strong>Commit new file</strong>.</p>
+      </div>
+
+      <div class="faq-question" onclick="toggleFaq(1)">
+        🔹 Apakah GitHub Pages mendukung JavaScript?
+      </div>
+      <div class="faq-answer">
+        <p>Ya! Kamu bisa menambahkan file <code>.js</code> dan menjalankan JavaScript seperti biasa. GitHub Pages mendukung semua kode statis (HTML, CSS, JS).</p>
+      </div>
+
+      <div class="faq-question" onclick="toggleFaq(2)">
+        🔹 Kenapa opsi <strong>Source</strong> di GitHub Pages tidak muncul?
+      </div>
+      <div class="faq-answer">
+        <p>Pastikan repository kamu diset ke <strong>public</strong>. GitHub Pages tidak bisa diaktifkan pada repository privat kecuali kamu pakai GitHub Pro.</p>
+      </div>
+
+      <div class="faq-question" onclick="toggleFaq(3)">
+        🔹 Bagaimana cara upload project dari VS Code ke GitHub?
+      </div>
+      <div class="faq-answer">
+        <p>Buka terminal di VS Code dan jalankan perintah <code>git init</code>, <code>git add .</code>, <code>git commit</code>, lalu <code>git push</code> ke repository GitHub kamu. Jangan lupa hubungkan remote dengan perintah <code>git remote add origin</code>.</p>
+      </div>
+
     </div>
 
     <div class="step">
-      <h2>6. FAQ (Pertanyaan Umum)</h2>
-
-      <h3>🔹 Bagaimana cara menambahkan file <code>index.html</code> langsung dari GitHub tanpa Visual Studio Code?</h3>
-      <p>Kamu bisa menambahkan file langsung dari web GitHub tanpa perlu aplikasi tambahan. Caranya:</p>
-      <ol>
-        <li>Buka halaman repository kamu di GitHub</li>
-        <li>Klik tombol <strong>Add file</strong> → <strong>Create new file</strong></li>
-        <li>Di kolom <strong>File name</strong>, ketikkan: <code>index.html</code></li>
-        <li>Tulis isi HTML sederhana di bawahnya, misalnya:
-          <pre><code>&lt;h1&gt;Hai, Nama saya R Hendro Jaya Malau!&lt;/h1&gt;</code></pre>
-        </li>
-        <li>Scroll ke bawah, isi pesan commit misalnya: <em>"menambahkan index.html"</em></li>
-        <li>Klik tombol <strong>Commit new file</strong></li>
-      </ol>
-      <p>Setelah itu kamu bisa mengaktifkan GitHub Pages seperti biasa. File <code>index.html</code> akan menjadi halaman utama website kamu.</p>
+      <h2>6. Penutup</h2>
+      <p>Dengan GitHub Pages, kamu bisa membuat website profesional tanpa biaya hosting. Mudah digunakan, cepat, dan cocok untuk siapa saja.</p>
     </div>
   </div>
 
   <footer>
     &copy; 2025 TutorialGitHubPages | Dibuat dengan ❤️ oleh ChatGPT & User
   </footer>
+
+  <script>
+    function toggleFaq(index) {
+      const answers = document.querySelectorAll('.faq-answer');
+      const current = answers[index];
+      const isVisible = current.style.display === 'block';
+
+      answers.forEach(a => a.style.display = 'none'); // Sembunyikan semua
+      if (!isVisible) current.style.display = 'block'; // Tampilkan yang diklik
+    }
+  </script>
 </body>
 </html>
