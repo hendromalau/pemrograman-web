@@ -235,79 +235,35 @@ git push origin main</code></pre>
         <li>Custom domain? Tambahkan file <code>CNAME</code></li>
 
       </ul>
-
     </div>
-
-
-
     <div class="step">
-
       <h2>5. FAQ (Pertanyaan Umum)</h2>
-
-
-
       <div class="faq-question" onclick="toggleFaq(0)">
-
         🔹 Bagaimana cara menambahkan file <code>index.html</code> langsung tanpa VS Code?
-
       </div>
-
       <div class="faq-answer">
-
         <p>Buka repository kamu, Klik <strong>Add file</strong> → <strong>Create new file</strong> di GitHub, beri nama <code>index.html</code>, lalu isi konten HTML-nya. Setelah itu klik <strong>Commit new file</strong>.</p>
-
         <img src="images/add_file.jpg" alt="Langkah Add File di GitHub" style="max-width: 100%; border-radius: 8px; margin-top: 10px;" />
-
       </div>
-
-
-
       <div class="faq-question" onclick="toggleFaq(1)">
-
         🔹 Apakah GitHub Pages mendukung JavaScript?
-
       </div>
-
       <div class="faq-answer">
-
         <p>Ya! Kamu bisa menambahkan file <code>.js</code> dan menjalankan JavaScript seperti biasa. GitHub Pages mendukung semua kode statis (HTML, CSS, JS).</p>
-
       </div>
-
-
-
       <div class="faq-question" onclick="toggleFaq(2)">
-
         🔹 Kenapa opsi <strong>Source</strong> di GitHub Pages tidak muncul?
-
       </div>
-
       <div class="faq-answer">
-
         <p>Pastikan repository kamu diset ke <strong>public</strong>. GitHub Pages tidak bisa diaktifkan pada repository privat kecuali kamu pakai GitHub Pro.</p>
-
       </div>
-
-
-
       <div class="faq-question" onclick="toggleFaq(3)">
-
         🔹 Bagaimana cara upload project dari VS Code ke GitHub?
-
       </div>
-
       <div class="faq-answer">
-
         <p>Buka terminal di VS Code dan jalankan perintah <code>git init</code>, <code>git add .</code>, <code>git commit</code>, lalu <code>git push</code> ke repository GitHub kamu. Jangan lupa hubungkan remote dengan perintah <code>git remote add origin</code>.</p>
-
       </div>
-
-
-
     </div>
-
-
-
     <div class="step">
 
       <h2>6. Penutup</h2>
@@ -317,37 +273,18 @@ git push origin main</code></pre>
     </div>
 
   </div>
-
-
-
   <footer>
-
     &copy; 2025 TutorialGitHubPages | R Hendro Jaya Malau | NIM : 221011450073
-
   </footer>
-
-
-
   <script>
 
     function toggleFaq(index) {
-
       const answers = document.querySelectorAll('.faq-answer');
-
       const current = answers[index];
-
       const isVisible = current.style.display === 'block';
-
-
-
       answers.forEach(a => a.style.display = 'none'); // Sembunyikan semua
-
       if (!isVisible) current.style.display = 'block'; // Tampilkan yang diklik
-
     }
-
   </script>
-
 </body>
-
 </html>
